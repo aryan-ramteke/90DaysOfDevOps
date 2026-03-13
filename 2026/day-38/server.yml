@@ -1,0 +1,25 @@
+# ### Task 3: Nested Objects
+# Create `server.yaml` that describes a server:
+# - `server` with nested keys: `name`, `ip`, `port`
+# - `database` with nested keys: `host`, `name`, `credentials` (nested further: `user`, `password`)
+
+# **Verify:** Try adding a tab instead of spaces — what happens when you validate it?
+# -> no error
+# ---
+
+server:
+  name: my-web-app
+  ip: 172.0.0.1
+  port: 80
+database:
+  host: mysql-server
+  name: mysql
+  credentials:
+    user: root
+    password: root@123
+startup-script: |
+  This is a 
+  multiline string.
+startup-script2: >
+  This is single
+  line script

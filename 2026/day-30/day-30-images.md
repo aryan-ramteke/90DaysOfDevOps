@@ -29,20 +29,44 @@ done.
 ### Task 3: Container Lifecycle
 Practice the full lifecycle on one container:
 1. **Create** a container (without starting it)
-   ```bash
-   docker create --name myalpine alpine
-   ```
-   This command creates a container named `myalpine` from the `alpine` image; it will be listed as `Created` in `docker ps -a`.
 2. **Start** the container
-   ```bash
-   docker start myalpine
-   ```
-   After starting, `docker ps` will show the container running.
 3. **Pause** it and check status
 4. **Unpause** it
 5. **Stop** it
 6. **Restart** it
 7. **Kill** it
 8. **Remove** it
+![alt text](image-2.png)
+![alt text](image-3.png)
 
 Check `docker ps -a` after each step — observe the state changes.
+
+### Task 4: Working with Running Containers
+1. Run an Nginx container in detached mode
+2. View its **logs**
+3. View **real-time logs** (follow mode)
+![alt text](image-4.png)
+
+4. **Exec** into the container and look around the filesystem
+![alt text](image-5.png)
+5. Run a single command inside the container without entering it
+![alt text](image-6.png)
+
+6. **Inspect** the container — find its IP address, port mappings, and mounts
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
+---
+
+### Task 5: Cleanup
+1. Stop all running containers in one command
+![alt text](image-12.png)
+
+2. Remove all stopped containers in one command
+![alt text](image-11.png)
+
+3. Remove unused images
+![alt text](image-13.png)
+
+4. Check how much disk space Docker is using
+![alt text](image-14.png)

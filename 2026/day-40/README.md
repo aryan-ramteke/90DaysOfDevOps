@@ -67,8 +67,9 @@ Push again — watch the new run.
 3. Fix it and push again
 
 Write in your notes: What does a failed pipeline look like? How do you read the error?
-
+- done
 ---
+![alt text](image-3.png)
 
 ## Hints
 - Workflow files live in `.github/workflows/` and must end in `.yml`

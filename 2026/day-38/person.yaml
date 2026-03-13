@@ -1,0 +1,12 @@
+name: Aaryan Ramteke
+role: Data Engineer
+exprerience_years: 2.8
+learning: yes
+
+tools:
+  - git
+  - Ansible
+  - Terraform
+  - prometheus
+  - graphana
+hobbies: [git,Ansible,Terraform,Prometheus,Graphana]
