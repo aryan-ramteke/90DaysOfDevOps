@@ -1,0 +1,26 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: live-conf
+
+spec:
+  containers:
+    - name: live-conf
+      image: busybox:latest
+      command: 
+      - sh
+      - -c
+      - |
+        while true; do
+        pwd
+        cat conf/message 
+        sleep 5 
+        done
+      volumeMounts:
+        - name: live-conf
+          mountPath: /conf
+
+  volumes:
+    - name: live-conf
+      configMap:
+        name: live-config

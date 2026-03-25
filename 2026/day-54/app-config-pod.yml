@@ -1,0 +1,15 @@
+kind: Pod
+apiVersion: v1
+
+metadata:
+  name: app-config
+
+spec:
+   restartPolicy: Never
+   containers:
+    - name: app-config
+      image: busybox:latest
+      command: ["sh","-c","echo 'app env : $(APP_ENV), app debug: $(APP_DEBUG) and app port: $(APP_PORT)'"]
+      envFrom:
+        - configMapRef:
+              name: app-config
