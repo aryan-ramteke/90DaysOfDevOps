@@ -1,0 +1,23 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: sc-pod
+spec:
+  containers:
+    - name: sc-cont
+      image: busybox:latest
+      command: 
+      - sh
+      - c
+      - while true; do
+          sleep 10000;
+          done
+      volumeMounts:
+        - name: my-pvc
+          mountPath: /data
+
+  volumes:
+  - name: my-pvc
+    persistentVolumeClaim:
+      claimName: sc-pvc
+

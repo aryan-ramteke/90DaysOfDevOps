@@ -1,0 +1,24 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: emptydir-pod
+
+spec:
+  containers:
+    - name: empty
+      image: busybox:latest
+      command:
+        - sh
+        - -c
+        - |
+            while true; do
+              date >> /data/message.txt
+              sleep 5
+            done
+      volumeMounts:
+        - name: empty-vol
+          mountPath: /data
+
+  volumes:
+  - name: empty-vol
+    emptyDir: {}

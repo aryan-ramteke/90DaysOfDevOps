@@ -1,0 +1,15 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv
+
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+     - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual
+  hostPath: 
+    path: "/tmp/k8s-pv-data"
+
