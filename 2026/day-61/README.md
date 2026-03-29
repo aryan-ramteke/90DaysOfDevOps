@@ -85,9 +85,9 @@ terraform apply     # Create the bucket (type 'yes' to confirm)
 ```
 
 Go to the AWS S3 console and verify your bucket exists.
-
+![alt text](image.png)
 **Document:** What did `terraform init` download? What does the `.terraform/` directory contain?
-
+- It initialised the terraform by installing the required plugins/providers. The .terraform/ folder contains tf aws provider executable.
 ---
 
 ### Task 4: Add an EC2 Instance
@@ -103,9 +103,9 @@ terraform apply
 ```
 
 Go to the AWS EC2 console and verify your instance is running with the correct name tag.
-
+![alt text](image-1.png)
 **Document:** How does Terraform know the S3 bucket already exists and only the EC2 instance needs to be created?
-
+Terraform knows this because of its state file (terraform.tfstate).
 ---
 
 ### Task 5: Understand the State File
@@ -131,15 +131,19 @@ terraform state show aws_instance.<name>
 1. Change the EC2 instance tag from `"TerraWeek-Day1"` to `"TerraWeek-Modified"` in your `main.tf`
 2. Run `terraform plan` and read the output carefully:
    - What do the `~`, `+`, and `-` symbols mean?
+   -> ~ meand to update in-place, + = create/add, - delete
    - Is this an in-place update or a destroy-and-recreate?
+   -> it is in-place update
 3. Apply the change
 4. Verify the tag changed in the AWS console
+![alt text](image-2.png)
 5. Finally, destroy everything:
 ```bash
 terraform destroy
 ```
 6. Verify in the AWS console -- both the S3 bucket and EC2 instance should be gone
-
+![alt text](image-3.png)
+![alt text](image-4.png)
 ---
 
 ## Hints
