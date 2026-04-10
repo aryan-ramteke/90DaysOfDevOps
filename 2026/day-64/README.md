@@ -5,7 +5,7 @@ The state file is the single most important thing in Terraform. It is the source
 
 Today you learn to manage state like a professional -- remote backends, locking, importing existing resources, and handling drift.
 
----
+--- 
 
 ## Expected Output
 - Terraform state migrated from local to S3 remote backend with DynamoDB locking
