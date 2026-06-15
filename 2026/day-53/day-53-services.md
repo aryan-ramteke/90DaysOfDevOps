@@ -195,7 +195,7 @@ kubectl get nodes -o wide
 curl http://localhost:30080
 ```
 ![alt text](image-6.png)
-**Verify:** Can you see the Nginx welcome page from your browser or terminal using the NodePort?
+**Verify:** Can you see the Nginx  welcome page from your browser or terminal using the NodePort?
 - No in windows. As this IP(of k8s cluster node) is the internal IP which is the docker container IP on the kind internal bridge network. So if we curl in wndows, windows try to find this IP in its physical network and won't get this as it is not part of docker network, so need to expose/port-forwarding or other way is to add extra port mapping in the kind config file through which we created cluster. 
 ---
 

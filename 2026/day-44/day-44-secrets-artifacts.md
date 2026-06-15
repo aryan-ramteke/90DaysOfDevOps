@@ -43,16 +43,22 @@ Take any script from your earlier days (Python or Shell) and run it in CI:
    - Installs any dependencies needed
    - Runs the script
    - Fails the pipeline if the script exits with a non-zero code
+![alt text](image-5.png)
+![alt text](image-6.png)
 3. Intentionally break the script — verify the pipeline goes red
+![alt text](image-7.png)
 4. Fix it — verify it goes green again
-
+![alt text](image-8.png)
 ---
 
 ### Task 6: Caching
 1. Add `actions/cache` to a workflow that installs dependencies
 2. Run it twice — observe the time difference
+![alt text](image-9.png)
+![alt text](image-11.png)
+![alt text](image-10.png)
 3. Write in your notes: What is being cached and where is it stored?
-
+-> done
 ---
 
 ## Hints

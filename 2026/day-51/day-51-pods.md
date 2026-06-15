@@ -160,7 +160,7 @@ Before applying a manifest, you can validate it:
 
 ```bash
 # Check if the YAML is valid without actually creating the resource
-kubectl apply -f nginx-pod.yaml   
+kubectl apply -f nginx-pod.yaml --dry-run=client
 ![alt text](image-10.png)
 
 # Validate against the cluster's API (server-side validation)
